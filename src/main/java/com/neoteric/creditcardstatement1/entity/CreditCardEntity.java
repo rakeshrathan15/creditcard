@@ -9,7 +9,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.util.List;
 @Entity
-@Table()
+@Table(name = "creditcard",schema = "creditcard")
 @Getter
 @Setter
 @NoArgsConstructor
