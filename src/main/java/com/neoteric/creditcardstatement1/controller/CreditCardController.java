@@ -13,7 +13,12 @@ public class CreditCardController {
     @Autowired
     private CreditCardService creditCardService;
 
-    @PostMapping("/{id}/transactions")
+    @GetMapping("/{id}")
+    public ResponseEntity<String> getCreditCard(@PathVariable int id) {
+        return ResponseEntity.ok("Credit Card Details for ID: " + id);
+    }
+
+    @PostMapping("api/creditcards/{id}/transactions")
     public ResponseEntity<String> makeTransaction(
             @PathVariable int id, @RequestBody Transaction transaction) {
         creditCardService.makeTransaction(id, transaction);

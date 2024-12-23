@@ -8,19 +8,19 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-@Entity
-@Table
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+//@Entity
+//@Table
+//@Getter
+//@Setter
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class AccountEntity {
-    @Column()
+  //  @Column()
     private String accountNumber;
-    @Column
+  //  @Column
     private String accountHolderName;
-    @Column
+  //  @Column
     private double accountBalance;
-    @OneToOne
+  //  @OneToOne
     private CreditCard creditCard;
 }

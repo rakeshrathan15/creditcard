@@ -10,11 +10,12 @@ import org.springframework.stereotype.Component;
 public class AccountMapper {
 
 
-    @Autowired
-    ModelMapper mapper;
+   // @Autowired
+   // ModelMapper mapper;
 
-    public AccountEntity toEntity(Account account){
-        return mapper.map(account,AccountEntity.class);
-    }
+   // public AccountEntity toEntity(Account account){
+
+   //     return mapper.map(account,AccountEntity.class);
+    //}
 
 }

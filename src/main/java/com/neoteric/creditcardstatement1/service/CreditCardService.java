@@ -44,7 +44,7 @@ public class CreditCardService {
 
         // Create a TransactionEntity from the DTO
         TransactionEntity transactionEntity = mapper.map(transaction, TransactionEntity.class);
-        transactionEntity.setCreditCardEntity(creditCardEntity);
+        transactionEntity.setCreditCard(creditCardEntity);
         transactionRepository.save(transactionEntity);
 
         // Update available credit limit
@@ -78,7 +78,7 @@ public class CreditCardService {
         CreditCardEntity creditCardEntity = creditCardRepository.findById(creditCardId)
                 .orElseThrow(() -> new RuntimeException("Credit Card not found"));
 
-        List<TransactionEntity> transactions = transactionRepository.findByCreditCardEntity(creditCardEntity);
+        List<TransactionEntity> transactions = transactionRepository.findByCreditCard(creditCardEntity);
 
         for (TransactionEntity transaction : transactions) {
             if (!transaction.isEmi()) {

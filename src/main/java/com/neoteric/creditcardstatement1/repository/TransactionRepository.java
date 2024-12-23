@@ -10,5 +10,8 @@ import java.util.List;
 @Repository
 public interface TransactionRepository extends JpaRepository<TransactionEntity,Integer> {
 
-    List<TransactionEntity> findByCreditCardEntity(CreditCardEntity creditCardEntity);
+   // List<TransactionEntity> findByCreditCardEntity(CreditCardEntity creditCardEntity);
+
+    List<TransactionEntity> findByCreditCard(CreditCardEntity creditCardEntity);
+
 }
